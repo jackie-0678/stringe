@@ -14,9 +14,9 @@
 clean_string <- function(x, set_case = NULL, set_recode = NULL, FUN = NULL, ...){
   require(stringr)
 
-  if(!is.null(set_recode)){x <- str_replace_all(x, set_recode)}
-  x <- remove_ws(x)
   if(!is.null(set_case)){x <- text_case(x,set_case)}
+  x <- remove_ws(x)
+  if(!is.null(set_recode)){x <- str_replace_all(x, set_recode)}
   if(!is.null(FUN)){x <- FUN(x, ...)}
 
   return(x)
