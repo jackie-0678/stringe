@@ -48,7 +48,9 @@ valid_date <- function(x, format = 'all', allow = NULL, na_to_false = FALSE) {
   if(!is.null(allow)){index[which(x %in% allow)] <- which(x %in% allow)}
 
   # identify invalid values
-  if(na_to_false == FALSE){invalid <- which(!is_valid(x))}
+  if(na_to_false == FALSE){
+  	invalid <- which(!is_valid(x))
+  	} else{ invalid <- NULL}
 
   x <- return_values(index,invalid)
 

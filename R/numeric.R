@@ -47,7 +47,9 @@ valid_numeric <- function(x, minn = 0, maxx = .Machine$integer.max, decimals = 2
   index[index][as.numeric(x[index]) < minn | as.numeric(x[index]) > maxx] <- 0
 
   # identify invalid values
-  if(na_to_false == FALSE){invalid = which(!is_valid(x))}
+  if(na_to_false == FALSE){
+  	invalid <- which(!is_valid(x))
+  	} else{ invalid <- NULL}
 
   x <- return_values(index,invalid)
 

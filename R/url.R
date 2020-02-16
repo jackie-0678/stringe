@@ -18,7 +18,9 @@ valid_url <- function(x, na_to_false = FALSE) {
   index[index][!vapply(x[index],valid_url_status,logical(1))] <- 0
 
   # identify invalid values
-  if(na_to_false == FALSE){invalid <- which(!is_valid(x))}
+  if(na_to_false == FALSE){
+  	invalid <- which(!is_valid(x))
+  	} else{ invalid <- NULL}
 
   x <- return_values(index,invalid)
 

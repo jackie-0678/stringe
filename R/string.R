@@ -43,7 +43,9 @@ valid_string <- function(x, distinct_vals = NULL, set_regex = NULL, na_to_false 
   if(!is.null(distinct_vals)){index[index][!(x[index] %in% distinct_vals)] <- 0}
 
   # identify invalid values
-  if(na_to_false == FALSE){invalid <- which(!is_valid(x))}
+  if(na_to_false == FALSE){
+  	invalid <- which(!is_valid(x))
+  	} else{ invalid <- NULL}
 
   x <- return_values(index,invalid)
 
