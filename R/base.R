@@ -98,7 +98,7 @@ before_after <- function(x,FUN,...){
   require(knitr)
   
   p <- as.data.frame(x)
-  p$new <- FUN(...)(x)
+  p$new <- FUN(x, ...)
   p <- p[p$x != p$new,]
   
   kable(p)
