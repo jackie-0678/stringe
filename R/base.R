@@ -163,7 +163,7 @@ text_case <- function(x, set_case = NULL){
 totitle <- function(x, width = 100) {
   require(stringr)
   
-  x <- ifelse(!str_detect(x,"[^A-Z\\s\\d\\']"), tolower(x), x)
+  x <- ifelse(!str_detect(x,"[^A-Z\\s\\.\\-,;:&#()\\/\\d\\']"), tolower(x), x)
   
   if(any(str_detect(x, "^[a-z]|\\s[a-z]"))){
     x <- str_pad(x, width, pad= " ")
