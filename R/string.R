@@ -24,16 +24,16 @@ clean_string <- function(x, set_case = NULL, set_recode = NULL, FUN = NULL, ...)
 
 #' valid string
 #'
-#' Identify string data that does not meet Niche's expectations 
+#' Identify string data that does not meet expectations 
 #' @param x
 #' @param distinct
-#' @param na_to_false
+#' @param natofalse
 #' @keywords distinct string
 #' @export
 #' @examples
 #' valid_string()
 
-valid_string <- function(x, distinct_vals = NULL, set_regex = NULL, na_to_false = FALSE){
+valid_string <- function(x, distinct_vals = NULL, set_regex = NULL, natofalse = FALSE){
   require(stringr)
 
   index <- 1:length(x)
@@ -43,7 +43,7 @@ valid_string <- function(x, distinct_vals = NULL, set_regex = NULL, na_to_false 
   if(!is.null(distinct_vals)){index[index][!(x[index] %in% distinct_vals)] <- 0}
 
   # identify invalid values
-  if(na_to_false == FALSE){
+  if(natofalse == FALSE){
   	invalid <- which(!is_valid(x))
   	} else{ invalid <- NULL}
 

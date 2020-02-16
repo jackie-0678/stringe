@@ -21,18 +21,18 @@ clean_numeric <- function(x, decimals = 2) {
 
 #' valid numeric
 #'
-#' Identify numeric data that does not meet Niche's expectations
+#' Identify numeric data that does not meet expectations
 #' @param x
 #' @param decimals
 #' @param minn
 #' @param maxx
-#' @param na_to_false
+#' @param natofalse
 #' @keywords numeric
 #' @export
 #' @examples
 #' valid_numeric()
 
-valid_numeric <- function(x, minn = 0, maxx = .Machine$integer.max, decimals = 2, na_to_false = FALSE) {
+valid_numeric <- function(x, minn = 0, maxx = .Machine$integer.max, decimals = 2, natofalse = FALSE) {
   require(stringr)
 
   # logic
@@ -47,7 +47,7 @@ valid_numeric <- function(x, minn = 0, maxx = .Machine$integer.max, decimals = 2
   index[index][as.numeric(x[index]) < minn | as.numeric(x[index]) > maxx] <- 0
 
   # identify invalid values
-  if(na_to_false == FALSE){
+  if(natofalse == FALSE){
   	invalid <- which(!is_valid(x))
   	} else{ invalid <- NULL}
 

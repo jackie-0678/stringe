@@ -22,16 +22,16 @@ clean_date <- function(x,format = 'monthday') {
 
 #' valid date
 #'
-#' Identify date data that does not meet Niche's expectations 
+#' Identify date data that does not meet expectations 
 #' @param x
 #' @param format valid input includes 'all','monthday'
-#' @param na_to_false
+#' @param natofalse
 #' @keywords date
 #' @export
 #' @examples
 #' valid_date()
 
-valid_date <- function(x, format = 'all', allow = NULL, na_to_false = FALSE) {
+valid_date <- function(x, format = 'all', allow = NULL, natofalse = FALSE) {
   require(stringr)
 
   # logic
@@ -48,7 +48,7 @@ valid_date <- function(x, format = 'all', allow = NULL, na_to_false = FALSE) {
   if(!is.null(allow)){index[which(x %in% allow)] <- which(x %in% allow)}
 
   # identify invalid values
-  if(na_to_false == FALSE){
+  if(natofalse == FALSE){
   	invalid <- which(!is_valid(x))
   	} else{ invalid <- NULL}
 

@@ -1,14 +1,14 @@
 #' valid url
 #'
-#' Identify url data that does not meet Niche's expectations 
+#' Identify url data that does not meet expectations 
 #' @param x A url
-#' @param na_to_false 
+#' @param natofalse 
 #' @keywords valid
 #' @export
 #' @examples
 #' valid_url()
 
-valid_url <- function(x, na_to_false = FALSE) {
+valid_url <- function(x, natofalse = FALSE) {
   require(stringr)
 
   index <- 1:length(x)
@@ -18,7 +18,7 @@ valid_url <- function(x, na_to_false = FALSE) {
   index[index][!vapply(x[index],valid_url_status,logical(1))] <- 0
 
   # identify invalid values
-  if(na_to_false == FALSE){
+  if(natofalse == FALSE){
   	invalid <- which(!is_valid(x))
   	} else{ invalid <- NULL}
 

@@ -10,7 +10,7 @@ valid_date(x, format = "all", allow = NULL, na_to_false = FALSE)
 \item{format}{valid input includes 'all','monthday'}
 }
 \description{
-Identify date data that does not meet Niche's expectations
+Identify date data that does not meet expectations
 }
 \examples{
 valid_date()

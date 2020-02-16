@@ -8,7 +8,7 @@ valid_numeric(x, minn = 0, maxx = .Machine$integer.max, decimals = 2,
   na_to_false = FALSE)
 }
 \description{
-Identify numeric data that does not meet Niche's expectations
+Identify numeric data that does not meet expectations
 }
 \examples{
 valid_numeric()

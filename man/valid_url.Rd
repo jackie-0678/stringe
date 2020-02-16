@@ -12,7 +12,7 @@ valid_url(x, na_to_false = FALSE)
 \item{na_to_false}{}
 }
 \description{
-Identify url data that does not meet Niche's expectations
+Identify url data that does not meet expectations
 }
 \examples{
 valid_url()

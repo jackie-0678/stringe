@@ -8,7 +8,7 @@ valid_string(x, distinct_vals = NULL, set_regex = NULL,
   na_to_false = FALSE)
 }
 \description{
-Identify string data that does not meet Niche's expectations
+Identify string data that does not meet expectations
 }
 \examples{
 valid_string()
