@@ -4,7 +4,7 @@
 #' @param x
 #' @param set_regex
 #' @param set_case valid input can be 'title','lower','upper'
-#' @param set_recode input should be a named vector. ex: "remove char" = "replace char"
+#' @param set_recode input should be a named vector, with the regex as the name. ex: c("remove char" = "replace char")
 #' @param FUN an additionanl function call
 #' @keywords string
 #' @export
